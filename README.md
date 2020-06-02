@@ -9,4 +9,4 @@ QL => Q-learning agent (reinforcement learning)
 
 PSEQEA => Particle Swarm Embed Quantum-inspired Evolutionary Algorithm
 
-We also compare the permance of the two languages (python and matlab). In this set of codes we also solve the subset of Quadratic Knapsack problem (Cubic Graphic) in order to check the performance of the implementations as the number of decision variables increase. 
+We also compare the performance of the two languages (python and matlab). In this set of codes we also solve the subset of Quadratic Knapsack problem (Cubic Graphic) in order to check the performance of the implementations as the number of decision variables increase. 
