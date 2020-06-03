@@ -1,6 +1,5 @@
-# function that calculate the optimum using Bynary Particle Swarm
-
 def BPSO(noP, Max_Iteration, BPSO_num, CostFunction, noV):
+    """function that calculate the optimum using Bynary Particle Swarm"""
     import numpy as np
     import random
     import math
@@ -14,7 +13,7 @@ def BPSO(noP, Max_Iteration, BPSO_num, CostFunction, noV):
     Vmax=6
 
     #Velocity vector
-    Velocity = np.zeros([noP,noV]);       
+    Velocity = np.zeros([noP,noV])       
     
     #Position vector, Uniformly random O or 1 
     Position = np.random.randint(2, size=[noP,noV])
@@ -57,24 +56,21 @@ def BPSO(noP, Max_Iteration, BPSO_num, CostFunction, noV):
             
                 if BPSO_num==1:
                     s=1/(1+math.exp(-2*Velocity[i,j])) #S1 transfer function
-
-                 #if BPSO_num==2
-                 #s=1/(1+math.exp(-Velocity[i,j]))   %S2 transfer function              
+                            
                 if BPSO_num==2:
-                   #s=1/(1+exp(-(noV/45)*Velocity[i,j]))  #S2 transfer function
+                #s=1/(1+math.exp(-Velocity[i,j]))   %S2 transfer function   
+                #s=1/(1+exp(-(noV/45)*Velocity[i,j]))  #S2 transfer function
                     s=1/(1+math.exp(-(0.013*noV+0.13)*Velocity[i,j]))  #S2 transfer function
                 if BPSO_num==3:
                     s=1/(1+math.exp(-Velocity[i,j]/2)) #S3 transfer function              
                 if BPSO_num==4:
                     s=1/(1+math.exp(-Velocity[i,j]/3))  #S4 transfer function   
-
             
                 if BPSO_num<=4:  # S-shaped transfer functions
                     if random.uniform(0,1)<s:  # Equation (4) and (8)
                         Position[i,j]=1
                     else:
                         Position[i,j]=0
-
             
                 if BPSO_num==5:
                     s=abs(math.erf(((math.sqrt(math.pi)/2)*Velocity[i,j]))) #V1 transfer function

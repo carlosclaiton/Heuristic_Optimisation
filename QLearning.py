@@ -1,6 +1,5 @@
-# function that calculate the optimum using Q-learning algoritym
-
 def QLearning(NumAgents,NUM_ITERATIONS,CostFunction,noV):
+    """function that calculate the optimum using Q-learning algoritym"""
     import numpy as np
     import random
     import math
@@ -62,10 +61,7 @@ def QLearning(NumAgents,NUM_ITERATIONS,CostFunction,noV):
         if stepEqual == NumbConv:
             break
 
-    
     BestxVar = xVar[:,indexQ[0]]
     BestCost = CostFunction(BestxVar)
-
-        
-        
+     
     return(BestxVar,BestCost,1/Best,IterNumb)
