@@ -38,10 +38,10 @@ def BPSO(noP, Max_Iteration, BPSO_num, CostFunction, noV):
         
             if pBestScore[i]>fitness:
                 pBestScore[i]=fitness;
-                pBest[i,:] = Position[i,:]
+                pBest[i,:] = Position[i,:].copy()
             if gBestScore>fitness:
                 gBestScore=fitness
-                gBest=Position[i,:]
+                gBest=Position[i].copy()
         # update the W of PSO (inertia weight)
         w = wMax-IterNumb*((wMax-wMin)/Max_Iteration)
             

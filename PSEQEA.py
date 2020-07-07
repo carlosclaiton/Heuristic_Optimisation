@@ -43,10 +43,10 @@ def PSEQEA(noP,Max_iteration,CostFunction,noV):
         
             if pBestScore[i]>fitness:
                 pBestScore[i]=fitness;
-                pBest[i,:] = Position[i,:]
+                pBest[i,:] = Position[i,:].copy()
             if gBestScore>fitness:
                 gBestScore=fitness
-                gBest=Position[i,:]
+                gBest=Position[i].copy()
         
         #Calculating the rotation angle for each q-bit
         for i in range(noP):
