@@ -1,3 +1,9 @@
+"""
+Author: Carlos C. N. Kuhn
+email: carlos.kuhn@dst.defence.gov.au
+Last Modified: 10 Jul 2021
+"""
+
 import numpy as np
 import random
 import math
